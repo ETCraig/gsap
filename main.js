@@ -1,3 +1,4 @@
+// Party Styled Words
 const selectSVG = id => {
     const el = document.getElementById(id);
     return new SVGElement(el);
@@ -211,11 +212,8 @@ const selectSVG = id => {
   input.focus();
   addPrompt(0);
 
+  // Icon Animation
   var icon = document.getElementsByClassName('icon');
-
-//   TweenLite.to(icon, 5, {opacity: 0, y: 50});
-
-  var header = document.getElementsByClassName('title');
 
   TweenLite.to(icon, 1, {y:-200, delay:7});
   TweenLite.to(icon, 1, {y:-800, delay:8});
@@ -223,10 +221,13 @@ const selectSVG = id => {
 
   TweenMax.set(icon, {rotation:11, left: -41, top:-52})
 
+  // Title Animation
+  var header = document.getElementsByClassName('title');
 
   TweenLite.from(header, 1, {x:-1000, delay:5});
   TweenMax.to(header, 0.1, {x:"+=20", yoyo:true, repeat:5, delay:6});
 
+  // Img Animation
   var langss = document.getElementsByClassName('langs');
 
   TweenLite.from(langss, 1, {autoAlpha: 0, delay: 10});
